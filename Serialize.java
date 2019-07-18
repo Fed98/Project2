@@ -19,8 +19,9 @@ public class Serialize
 	private String name_powerplant,name_status,name_technology,name_subtechnology,start_year,name_region_L2,name_region_L1,name_country,name_continent,name_owner,name_operator,name_geothermal_area,name_turbine_type,turbine_man,NUTS2_code,NUTS1_code,max_well_depth,min_temp,max_temp,min_flow_rate,max_flow_rate;
 
 	private float latitude,longitude;
-
-
+/*
+* Costruttore della clase Serialize
+*/	
 	public Serialize(String name_powerplant,String name_status, String name_technology, String name_subtechnology,
 			String start_year, String name_region_L2, String name_region_L1, String name_country,String name_continent,
 			String name_owner, String name_operator,String name_geothermal_area,String name_turbine_type,String turbine_man,
@@ -61,9 +62,6 @@ public class Serialize
 
 	}
 
-	
-
-	public Serialize() { }
 	/**
 
 	 * Getters and Setters 
@@ -303,8 +301,10 @@ public class Serialize
 	
 
 	@Override
-	/*Sistema override*/
-
-	public String toString() {return "Ripetitore ["
-			+ "]";
-	}}
+	/* 
+	* Sistema override
+	* ToString
+	*/
+	public String toString() {return "Ripetitore [" + "]";
+	}
+}
