@@ -25,8 +25,8 @@ import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonValueFormat;
 import it.univpm.demoSpringBootApp.Serialize.Serialize;
 
 import java.lang.reflect.Field;
-	/** Classe utilizzare per la dichiarazione del vettore su cui poi vado ad interagire con le varie richieste. Tramite l'url poi
-	 * effettua la lettura e il parsing tramite i metodi readdata e insertdata
+	/** Classe utilizzare per la dichiarazione del vettore su cui poi vado ad interagire con le varie richieste.
+	* Tramite l'url poi effettua la lettura e il parsing tramite i metodi readdata e insertdata
 	 * @author Federico Tartabini
 	 * @author Nicola Montesi
 	 */
@@ -89,7 +89,8 @@ import java.lang.reflect.Field;
 			try (InputStream in = URI.create(url).toURL().openStream()) {
 				Files.copy(in, Paths.get(fileName));
 			}
-			System.out.println("Download effettuato");}
+			System.out.println("Download effettuato");
+		}
 		/** Metodo che effettua la lettura dei dati dall'URL passatogli, crea due stringhe data e line le quali si occupano di leggere riga
 		 *  per riga il file dell'url. Line, tramite il while controlla l'andata a capo del file di testo(quindi la fine della riga). Successivamente, tramite il for
 		 *  vado a cercare nel file le parole "format","url","csv" da cui poi vado a scaricare i dati 
@@ -226,7 +227,8 @@ public static void inserimento(String file) throws Exception
 			{
 				throw new IllegalArgumentException(" - invalid format!");
 			}	
-				return VFilter;}
+				return VFilter;
+		}
 		
 		/** 
 		 * Il metodo seguente modella gli oggetti di tipo MetaDati creandoli sulla base degli attributi della classe ripetitore,
@@ -241,4 +243,6 @@ public static void inserimento(String file) throws Exception
 					mm.setNome(o.getName());
 					mm.setTipo(o.getType().getSimpleName());
 					m.add (mm);}
-			return m;}}
+			return m;
+		}
+	}
